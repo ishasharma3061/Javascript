@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student List App</title>
+</head>
+<body>
+
+    <input type="text" id="studentName" placeholder="Enter Student Name">
+    <button id="addStudentBtn">Add Student</button>
+
+    <ul id="studentList"></ul>
+
+    <script>
+        document.getElementById("addStudentBtn").addEventListener("click", function () {
+
+            // Step 1: Get input value
+            const nameInput = document.getElementById("studentName");
+            const name = nameInput.value;
+
+            // Stop if input is empty
+            if(name.trim() === "") return;
+
+            // Step 2: Create a new li element
+            const li = document.createElement("li");
+            li.textContent = name;
+
+            // Step 3: Append li to the list
+            document.getElementById("studentList").appendChild(li);
+
+            // Step 4: Clear input
+            nameInput.value = "";
+        });
+    </script>
+
+</body>
+</html> -->
+<!-- ------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage Info Toggle</title>
+</head>
+<body>
+    <p id="welcomeMsg">Welcome to our website! Have a great experience 😊</p>
+    <button id="toggleBtn">Hide</button>
+     <script>
+        document.getElementById("toggleBtn").addEventListener("click", function () {
+            const message = document.getElementById("welcomeMsg");
+            const button = document.getElementById("toggleBtn");
+            // Check if message is currently visible
+            if (message.style.display === "none") {
+                // Show the message again
+                message.style.display = "block";
+                // Change button text to "Hide"
+                button.textContent = "Hide";
+            } else {
+                // Hide the paragraph
+                message.style.display = "none";
+                // Change button text to "Show"
+                button.textContent = "Show";
+            }
+        });
+    </script>
+</body>
+</html>
